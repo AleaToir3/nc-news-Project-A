@@ -1,11 +1,18 @@
-const cors = require('cors');
-app.use(cors());
 function App() {
+
+  
   return (
     <div className="App">
-      <h1>hello App</h1>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        
+      </Routes>
+      <h1>Hello World</h1>
     </div>         
   );
 }
 
 export default App;
+
+
