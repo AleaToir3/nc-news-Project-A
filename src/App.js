@@ -4,7 +4,6 @@ import Profile from "./components/Profile";
 import AllArticles from "./components/AllArticles";
 import { Route, Routes } from "react-router-dom";
 import "./css/App.css";
-import { FaBeer } from 'react-icons/fa';
 
 
 function App() {

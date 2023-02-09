@@ -1,4 +1,5 @@
 import "../css/index.css"
+import { Link } from "react-router-dom";
 const Last4Cards = (articles) => {
     console.log("🚨🔥  file: Last4Cards.jsx:2  Last4Cards  articles", articles);
     
@@ -15,7 +16,8 @@ const Last4Cards = (articles) => {
             {articles.articles.map((e)=>{
                 return (
                     <div key={e.article_id} className="Last4Cards">
-                        <Link></Link>
+                        <Link to={`/articles/${e.article_id}`}>  
+                        
                         <img src={e.article_img_url} alt="" />
                         <h4>{e.title}</h4>
                         <div>
@@ -23,7 +25,7 @@ const Last4Cards = (articles) => {
                         </div>
                         {/* <p>Topic :{e.topic}</p> */}
                         <p>body :{e.body.substring(0, 250) + "..."}</p>
-                        <p className="date">{convertDate(e.created_at)}</p>
+                        </Link>
                     </div>
                 )
             }
