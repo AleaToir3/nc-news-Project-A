@@ -1,0 +1,78 @@
+.articles{
+/* border: 5px solid #db0505; */
+width: 100%;
+display: flex;
+margin-bottom: 20px;
+
+}
+
+.randomArticles{
+
+}
+.h2title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 2rem  5rem;
+    padding: 1rem; 
+    text-align: center;
+    color: #e0321b;
+    border: #c5c1c1 1px solid;
+}
+.Last4Cards{
+    display: flex;
+    flex-direction: column;
+    justify-content:  space-between;
+    background-color: #c5c1c1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;  
+    border: 1px solid #2f1be0;
+    max-height: 350px;
+    margin-right: 10px;
+}
+.Last4Cards img{
+   height: 180px;
+}
+.Last4Cards h5{
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.Last4Cards h4{
+    font-size: 1rem;
+    padding: 0;  
+    margin: 0;
+    text-align: center;
+}
+.Last4Cards p{
+    font-size: 0.8rem;
+    padding: 0 ;
+    margin: 0;
+}
+.Last4Cards > div{
+    display: flex;
+    flex-direction: row;
+}
+.Last4Cards > div > p{
+    font-size: small;
+}
+.Last4Cards .date{
+text-align: end;
+}
+
+.FcBusinessman {
+    font-size: 2rem;
+    border: 1px solid #efeff5;
+    border-radius: 50%;
+    padding: 0.3rem;
+    margin: 0 1rem;
+}
+.FcBusinessman:hover{
+    background-color: #efeff5;
+    color: #2f1be0;
+    border: 1px solid #2f1be0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
