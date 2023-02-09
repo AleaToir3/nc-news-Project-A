@@ -1,0 +1,15 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* height: 100vh;
+    width: 100vw; */
+    /* border: 5px saddlebrown solid; */
+    font-size: 1rem;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
