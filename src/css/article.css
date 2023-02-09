@@ -1,0 +1,19 @@
+.article{
+    width: 80%;
+    height: 100%;
+    background-color: #e9e0e0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.article img
+{
+width: 80%;
+}
