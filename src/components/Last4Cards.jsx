@@ -1,16 +1,7 @@
 import "../css/index.css"
 import { Link } from "react-router-dom";
 const Last4Cards = (articles) => {
-    console.log("🚨🔥  file: Last4Cards.jsx:2  Last4Cards  articles", articles);
-    
-    const convertDate = (date) => {
-        const newDate = new Date(date);
-        return newDate.toDateString('default', {
-            day: '2-digit',
-            month: '2-digit',
-            year: '2-digit'});
-    }
-  
+      
     return (
         < >
             {articles.articles.map((e)=>{

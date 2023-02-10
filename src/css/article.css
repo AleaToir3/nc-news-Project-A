@@ -1,0 +1,62 @@
+.article{
+    width: 80%;
+    height: 100%;
+    background-color: #ebe4e4;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.article img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.article .comment{
+    background: #fdfdfd;
+    width: 70%;  
+    border: 1px solid #918e8e;
+    border-radius: 5px;    
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;    
+    align-items: center;
+    margin: 0 auto 1rem auto;
+}
+.article .comment p{
+    font-size: smaller;
+    margin: 0 0 0.5rem 0 ;
+}
+
+.article .comment i:last-child{
+   font-size: 0.5rem;
+   text-align: end;
+   margin-right: 1rem;
+}
+.article h6{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem ;
+}
+.voteArticle{
+    font-size: xx-large;
+    color: rgb(32, 13, 13);
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 1rem;
+
+}
+.voteComment{
+    font-size: xx-small;
+    text-align: left;
+    float: right;
+}

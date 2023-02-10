@@ -2,25 +2,16 @@ import { articlesAPI } from "../utils";
 import { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import { Link } from "react-router-dom";
-
+import convertDate from "../functions/date";
 const AllArticles = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     articlesAPI().then((res) => {
       setArticles(res.articles);
-      console.log(res);
     });
   }, []);
 
-  const convertDate = (date) => {
-    const newDate = new Date(date);
-    return newDate.toDateString("default", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "2-digit",
-    });
-  };
   return (
     <>
       <SearchBar />

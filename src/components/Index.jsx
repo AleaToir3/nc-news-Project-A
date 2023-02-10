@@ -28,9 +28,6 @@ const Index = () => {
         setrandomArticles(fourRdmArticleNotIncludedInFourArticles)
         // ----------------------------------------
       
-        console.log(">>> fourArticlesSorted",fourArticlesSorted)
-        console.log("🚨🔥  file: Index.jsx:82  rdmArticleNotIncludedInFourArticles  rdmArticleNotIncludedInFourArticles", fourRdmArticleNotIncludedInFourArticles);
-
           });
   }, [setArticles])
 

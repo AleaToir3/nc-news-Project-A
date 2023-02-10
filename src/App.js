@@ -1,6 +1,7 @@
 import Index from "./components/Index";
 import MyNav from "./components/MyNav";
 import Profile from "./components/Profile";
+import Article from "./components/Article";
 import AllArticles from "./components/AllArticles";
 import { Route, Routes } from "react-router-dom";
 import "./css/App.css";
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/" element={<Index />} />
           <Route path="/articles" element={<AllArticles />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/articles/:article_id" element={<Article />} />
       </Routes>
         </div>
     </div>
