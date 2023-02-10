@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { articlesByIdAPI, commentByArticlesByIdAPI, patchVoteArticleIdAPI } from "../utils";
+import { articlesByIdAPI, commentsByArticleAPI, patchVoteArticleIdAPI } from "../utils";
 import { BsHandThumbsDown, BsHandThumbsUp, BsPerson,BsFillEmojiAngryFill } from "react-icons/bs";
 import "../css/article.css";
 import convertDate from "../functions/date";
+import ListComments from "./ListComments";
 const Article = () => {
   const [article, setArticle] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
-  const [comments, setComments] = useState();
+  // const [comments, setComments] = useState();
   const [clickUp, setClickUp] = useState(false);
   const [clickdDown, setClickdDown] = useState(false);
   const [vote, setVote] = useState(0);
@@ -23,11 +24,11 @@ const Article = () => {
         });
   }, [setArticle, setVote]);
 
-  useEffect(() => {
-    commentByArticlesByIdAPI(article_id).then((resCom) => {
-      setComments(resCom.commentsByArticle);
-    });
-  }, [setComments]);
+  // useEffect(() => {
+  //   commentsByArticleAPI(article_id).then((resCom) => {
+  //     setComments(resCom.data.commentsByArticle);
+  //   });
+  // }, [setComments]);
 
   const changeVote = (id, changeVote) => {
     setVote((cuurValue) => {
@@ -79,7 +80,8 @@ const Article = () => {
           </i>
         </div>
       </div>
-      <div className="comments">
+      <h3>COMMENTS</h3>
+      {/* <div className="comments">
         {comments?.map((comment) => {
           return (
             <div
@@ -100,7 +102,8 @@ const Article = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
+      <ListComments article_id={article_id}/>
     </div>
   );
 };

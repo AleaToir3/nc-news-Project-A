@@ -22,7 +22,10 @@ export const patchVoteArticleIdAPI = (article_id,addvote)=>{
     .then(({data})=>{
         return data})   
 }
-export const commentByArticlesByIdAPI = (article_id,addvote)=>{
-    return baseAPI.get(`articles/${article_id}`)
+export const commentsByArticleAPI = (article_id)=>{
+    return baseAPI.get(`articles/${article_id}/comments`)
 }
 
+export const addCommentsOnArticleIdAPI = (article_id)=>{
+    return baseAPI.get(`articles/${article_id}/comments`)
+}

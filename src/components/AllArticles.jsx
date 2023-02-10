@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import { Link } from "react-router-dom";
 import convertDate from "../functions/date";
+import "../css/allArticles.css"
 const AllArticles = () => {
   const [articles, setArticles] = useState([]);
 
@@ -16,7 +17,7 @@ const AllArticles = () => {
     <>
       <SearchBar />
 
-      <div className="">
+      <div className="all">
         {articles.map((e) => {
           return (
             <div key={e.article_id} className="Last4Cards">               
