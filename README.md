@@ -14,14 +14,14 @@ https://bbc-4lw2.onrender.com/
 ### API REFERENCES !
 
 
-## [GET:   --   topics /api/topics](#topics)
+## [GET:   --   topics    "/api/topics"](#topics)
 
-## [GET:   --   article/api/articles](#articles)
-## [GET:   --   article_id/api/articles/:article_id](#article_id)
-## [GET:   --   article_id_comments/api/articles/:article_id/comments](#article_id_comments)
+## [GET:   --   article    "/api/articles"](#articles)
+## [GET:   --   article_id    "/api/articles/:article_id"](#article_id)
+## [GET:   --   article_id_comments    "/api/articles/:article_id/comments"](#article_id_comments)
 
-## [POST:  --   post_article_id_comments/api/articles/:article_id/comments](#post_article_id_comments)
-## [PATCH: --   patch_article_id_comments/api/articles/:article_id/comments](#patch_article_id_comments)
+## [POST:  --   post_article_id_comments:  "/api/articles/:article_id/comments"](#post_article_id_comments)
+## [PATCH: --   patch_article_id_comments: "/api/articles/:article_id/comments"](#patch_article_id_comments)
 
 ## [GET:   --   users/api/users](#users)
 

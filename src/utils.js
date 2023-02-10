@@ -16,10 +16,13 @@ export const articlesByIdAPI = (article_id)=>{
     return baseAPI.get(`articles/${article_id}`)
     .then(({data})=>{return data})   
 }
-
-
-// let articlesById= null;
-// articlesByIdAPI(2).then((data)=>{articlesById = data
-// ici il faut le mettre dans le fichier concerner dans un usestats})
-
+export const patchVoteArticleIdAPI = (article_id,addvote)=>{
+    const patchBody =  {inc_votes: addvote}
+    return baseAPI.patch(`articles/${article_id}`,patchBody)
+    .then(({data})=>{
+        return data})   
+}
+export const commentByArticlesByIdAPI = (article_id,addvote)=>{
+    return baseAPI.get(`articles/${article_id}`)
+}
 
