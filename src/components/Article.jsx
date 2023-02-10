@@ -4,6 +4,7 @@ import { articlesByIdAPI, patchVoteArticleIdAPI } from "../utils";
 import { BsHandThumbsDown, BsHandThumbsUp, BsFillEmojiAngryFill } from "react-icons/bs";
 import "../css/article.css";
 import ListComments from "./ListComments";
+import PostComments from "./PostComments";
 const Article = () => {
   const [article, setArticle] = useState();
   const [loading, setLoading] = useState(true);
@@ -39,9 +40,9 @@ const Article = () => {
   };
   if(loading){
     if(error) {
-      return <h1><BsFillEmojiAngryFill /> {error.response.data} <BsFillEmojiAngryFill /> </h1>
+      return <h1 className="load-txt"><BsFillEmojiAngryFill /> {error.response.data} <BsFillEmojiAngryFill /> </h1>
     }else{
-      return <p>loading...</p>
+      return <p className="load-txt">loading...</p>
     }
    }
   return (
@@ -72,9 +73,9 @@ const Article = () => {
           </i>
         </div>
       </div>
-      <h3>COMMENTS</h3>
-     
+      <h3>COMMENTS</h3>     
       <ListComments article_id={article_id}/>
+      <PostComments article_id={article_id}/>
     </div>
   );
 };

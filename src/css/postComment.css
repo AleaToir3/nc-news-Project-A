@@ -1,0 +1,32 @@
+.postcomment{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+}
+/* .postcomment button{
+    height: 40px;
+    background-color: #5d7c2b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+} */
+
+.postcomment button .nonvalidate{
+    color: #572a2a;
+}
+.postcomment textarea{
+    width: 90%;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+}

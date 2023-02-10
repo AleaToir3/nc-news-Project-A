@@ -1,26 +1,33 @@
-const PostComments = ({ comments }) => {
-    return (
-        <div className="comments">
-        {comments?.map((comment) => {
-            return (
-            <div
-                key={comment.comment_id}
-                className="comment">
-                <h6>
-                <BsPerson />
-                {comment.author}
-                </h6>
-                <p>{comment.body}</p>
-    
-                <div className="voteComment">
-                <i>
-                    <BsHandThumbsUp /> {comment.votes} <BsHandThumbsDown />
-                </i>
-                <i>{convertDate(comment.created_at)}</i>
-                </div>
-            </div>
-            );
-        })}
-        </div>
-    );
+import "../css/postComment.css";
+import { addCommentsOnArticleIdAPI } from "../utils";
+import { useState, useEffect } from "react";
+
+const PostComments = ({ article_id }) => {
+
+  const [comment, setComment] = useState("");
+  const [postedOrNot, setPostedOrNot] = useState(false);
+  const [user, setUser] = useState("cooljmessy");
+  
+  const addComment = (event) => {
+    event.preventDefault();
+    addCommentsOnArticleIdAPI(article_id, comment, user);
+    setComment("Message posted!");
+    setPostedOrNot(true);
+    console.log("comment added");
     };
+
+
+  return (
+    <div className="postcomment">
+      <label htmlFor="msg">Post your comment</label>
+      <textarea id="msg" name="msg" rows="5" cols="33" value={comment}
+        onChange={(event) => setComment(event.target.value)}/>
+        {console.log(comment)}
+        <button 
+            onClick={ addComment } disabled={postedOrNot} className={postedOrNot ? "active" : "nonvalidate"}>
+        Post comment
+      </button>
+    </div>
+  );
+};
+export default PostComments;

@@ -26,6 +26,9 @@ export const commentsByArticleAPI = (article_id)=>{
     return baseAPI.get(`articles/${article_id}/comments`)
 }
 
-export const addCommentsOnArticleIdAPI = (article_id)=>{
-    return baseAPI.get(`articles/${article_id}/comments`)
+export const addCommentsOnArticleIdAPI = (article_id,msg,author)=>{
+    const postBody =  {body:msg,author:author}
+
+    return baseAPI.post(`articles/${article_id}/comments`,postBody)
 }
+
