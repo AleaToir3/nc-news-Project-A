@@ -45,6 +45,8 @@ const Article = () => {
       return <p className="load-txt">loading...</p>
     }
    }
+
+   
   return (
     <div className="article">
       <div>
