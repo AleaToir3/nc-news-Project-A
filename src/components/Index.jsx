@@ -28,9 +28,6 @@ const Index = () => {
         setrandomArticles(fourRdmArticleNotIncludedInFourArticles)
         // ----------------------------------------
       
-        console.log(">>> fourArticlesSorted",fourArticlesSorted)
-        console.log("🚨🔥  file: Index.jsx:82  rdmArticleNotIncludedInFourArticles  rdmArticleNotIncludedInFourArticles", fourRdmArticleNotIncludedInFourArticles);
-
           });
   }, [setArticles])
 
@@ -42,6 +39,7 @@ const Index = () => {
       <div className="articles">        
       {articles.length > 0 ? <Last4Cards articles={articles} /> : <h1>loading...</h1>}
       </div>
+      
       <h2 className="h2title">Random articles not include in the last for articles </h2>
       <div className="articles">
       {randomArticles.length > 0 ? <Last4Cards articles={randomArticles} /> : <h1>loading...</h1>}

@@ -1,0 +1,14 @@
+
+.Last4Cards{
+    margin: 1rem;
+}
+
+.global{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    text-align: center;
+}
+.global img{
+ margin: auto 0;
+}

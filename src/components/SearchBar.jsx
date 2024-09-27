@@ -1,10 +1,25 @@
-const SearchBar = ()=>{
-    return (    
-        <div>
-                <select name="Select categories" id="selectCategories">select cat</select> 
-                <input type="text" />
-                <input type="submit" value="Search" />
-        </div>
-    )
-}
-export default SearchBar
+import { useEffect,useState } from "react";
+import { Link } from "react-router-dom";
+import { topicsAPI } from "../utils";
+const SearchBar = () => {
+  const [topicsCategories, setTopicsCategories] = useState([]);
+
+  useEffect(() => {
+    topicsAPI().then((res) => {
+      setTopicsCategories(res.topics);
+    });
+  }, []);
+
+  return (
+    <div>
+      {topicsCategories.map((e) => {
+        return (
+          <div key={e.slug}>
+            <Link to={`/articles?categories=${e.slug}`}>{e.slug}</Link>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+export default SearchBar;
